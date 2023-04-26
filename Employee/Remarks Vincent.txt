@@ -1,0 +1,55 @@
+﻿Dag Lindsey,
+
+de opmerkingen dit keer via GitHub.
+
+Goed dat je een class diagram hebt gemaakt.
+- Geef het wel een goede naam.
+
+Oefening 11.04 is iets dat vaak héén en terug gaat gaan, dus het is een lastige oefening.
+
+Je variabelen in de klasse Employee beginnen met een _. Mooi
+- Maar ze staan public, dat wil zeggen dat ik rechtstreek in de main ze kan wijzigen.
+- Dat is niet de bedoeling.
+- De properties staan public, de variabelen zelf staan private.
+- De wijzigingen moeten op die manier via de properties gebeuren.
+- Nu in je test programma kun je "dirk._blnGender" kiezen om te wijzigen.
+
+- EmployeeNumber --> Automatic string property (ok)
+  - Jij tikt in je commentaar overal "proporty" :-)
+
+- Name
+  - Zeer goed
+  - Bij een blanco (lege tekst) geef in de getter een "Jane" of "John" terug. Correct geprogrammeerd.
+
+- Gender. Mooi. Standaard en kan inderdaad ook een automatic property zijn.
+
+- AStartDate. Mooi.
+
+- EndDate. Dit heeft het foute datatype. Dit kan nooit leeg zijn.
+  - Er staat 01/01/0001 in als je geen datum erin zet.
+  - Zowel je variabele als je property moeten een ander datatype krijgen. (DateTime?) (het vraagteken moet er staan)
+  - Dat wil zeggen dat het kan leeg zijn.
+  - De rest van de code ziet er goed uit, maar probeer na je if ook een else te gebruiken.
+    --> Dus bij de get een "else" gebruiken.
+    --> Bij de set is het wel goed, wan je moet altijd _dtmEndDate invullen met value.
+
+- PartTime. OK.
+
+- WorkingHours. Hier doe je iets vreemds.
+  - Telkens je Workinghours gaat bekijken (getten), dan ga je er 20 of 40 bijtellen.
+  - Ik heb in je testprogramma 4 keer de workinghours van dirk getoond (zie je code).
+  - Dit kan dus niet goed zijn.
+  - Tip: Een getter wijzigt meestal geen gegevens. Hier wijzig je wel.
+
+- Er zit nog een groot probleem in.
+- Ik kan op verschillende manieren de startdatum achter de einddatum krijgen, of de einddatum voor de startdatum.
+  - Dit mag niet kunnen.
+
+- Tip:
+  - Hoe krijg je een datum achter of voor een andere datum?
+  - Je hebt datum1 en datum2.
+    - Op welke 2 manieren krijg je datum1 achter datum2. (In deze 2 manieren moet je checken en corrigeren of de datums goed staan.)
+
+- Je testprogramma test veel niet
+  - Wat doe je met lege namen? Ik zie het wel in commentaar staan. Waarom staat dat in commentaar?
+  - Zorg ervoor dat je test altijd alle testen draait en toont.
